@@ -1,0 +1,44 @@
+:root {
+  --h2fontsize: max(4vw, 2rem);
+  --lifontsize: max(3vw, 1.5rem);
+}
+
+section {
+  display: grid;
+  grid-template-areas:
+    "headbox headbox"
+    "textbox picbox";
+  gap: calc(var(--lifontsize) * 0.5);
+}
+
+header {
+  grid-area: headbox;
+  margin-top: calc(var(--h2fontsize) * 0.5);
+}
+
+div.content {
+  border: 1px solid red;
+}
+
+div.text {
+  grid-area: textbox;
+}
+
+div.image {
+  grid-area: picbox;
+}
+
+h2 {
+  font: bold var(--h2fontsize) Helvetica;
+  padding: calc(var(--h2fontsize) * 0.5);
+  border: 1px solid black;
+}
+
+ul {
+  padding: 1rem calc(var(--h2fontsize));
+}
+
+li {
+  font-size: var(--lifontsize);
+  padding: calc(var(--lifontsize) * 0.33);
+}
